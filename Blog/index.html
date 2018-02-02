@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+  <head>
+    <title>Blog</title>
+    <meta charset = "UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open Sans'>
+    <link rel='stylesheet' href='style.css'/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+
+    <!-- Header -->
+    <header>
+
+      <!-- Toggle button -->
+      <button id="toggle">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </button>
+
+      <!-- Search form -->
+      <form id="search">
+        <input type="text" placeholder="Search">
+        <button>
+          <img src="images/search.png" alt="search icon">
+        </button>
+      </form>
+      
+      <div class="divider"></div>
+
+      <!-- Profile -->
+      <div class="profile">
+        <div class="avatar">
+          <div class="online"></div>
+        </div>
+        <p class="name">
+          Ricardo P. Smith
+          <span class="admin">admin</span>
+        </p>
+      </div>
+
+      <!-- Notifications -->
+      <!-- Message -->
+      <div class="notifications">
+        <a href="#" class="message">
+          Message
+          <img src="images/mail.png" alt="mail icon">
+          <div class="online">
+            <span>6</span>
+          </div>
+        </a>
+
+        <!-- Notification -->
+        <a href="#" class="notification">
+          Notification
+          <img src="images/notification.png" alt="notification icon">
+          <div class="online">
+            <span>3</span>
+          </div>
+        </a>
+      </div>
+    </header>
+    
+  </body>
+</html>

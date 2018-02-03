@@ -1,0 +1,354 @@
+// Main
+main {
+    display: inline-block;
+    width: 100%;
+    margin: 0px;
+    padding: 15px 0px;
+    text-align: center;
+
+    @media (min-width: 1400px) {
+
+        // Profile
+        .profile {
+            display: inline-block;
+            width: 434px;
+            height: 510px;
+            background-color: $windowColor;
+            box-shadow: $defaultShadow;
+            text-align: center;
+            margin: 15px;
+            overflow: hidden;
+
+            // Info
+            .info {
+                width: 100%;
+                padding: 45px 0px 40px;
+            }
+
+            .avatar {
+                margin: 0 auto 30px;
+                border-radius: 50%;
+                background-color:  #e4e4e4;
+                width: 129px;
+                height: 129px;
+                position: relative;
+
+                .online {
+                    @include online(17px)
+                    border-width: 3px;
+                    position: absolute;
+                    bottom: 5px;
+                    right: 16px;
+                }
+            }
+
+            .name, .admin {
+                text-align: center;
+                font-family: $defaultFont;
+                font-weight: 300;
+                margin: 0px;
+                padding: 0px;
+            }
+
+            .name {
+                display: inline-block;
+                color:  #3c3c3c;
+                font-size: 19px;
+            }
+
+            .admin {
+                display: block;
+                color:  #757575;
+                font-size: 14px;
+            }
+
+            // Details
+            .details {
+                display: inline-block;
+                width: 50%;
+                padding: 21px 0px 21px 55px;
+                border-top: 1px solid #f1f1f1;
+
+                p {
+                    font-family: $defaultFont;
+                    color:  #4c5e70;
+                    font-size: 21px;
+                    font-weight: 400;
+                    line-height: 18px;
+                    text-align: left;
+                    margin: 0px;
+                }
+
+                span {
+                    display: block;
+                    font-family: $defaultFont;
+                    color:  #9eb1c3;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 12px;
+                    text-align: left;
+                    padding-bottom: 7px; 
+                }
+
+                &:nth-child(2), &:nth-child(4) {
+                    float: left;
+                    border-right: 1px solid #f1f1f1;
+                }
+
+                &:nth-child(3), &:nth-child(5) {
+                    float: right;
+                }
+
+                &:nth-child(4), &:nth-child(5) {
+                    border-bottom: 1px solid #f1f1f1;
+                }
+            }
+
+            // Send message
+            a {
+                display: inline-block;
+                margin: 21px;
+                font-family: $defaultFont;
+                color:  #547df9;
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 14.4px;
+            }
+        }
+
+        // Statistics image
+        .statistics-img {
+            display: inline-block;
+            margin: 15px;
+            padding: 0px;
+            vertical-align: top;
+            width: 901px;
+            height: 516px;
+        }
+
+        // Statistics bar
+        .statistics-bar {
+            display: inline-block;
+            margin: 15px;
+            width: 1368px;
+            clear: both;
+            vertical-align: top;
+
+            .statistic {
+                background-color:  #a4d882;
+                box-shadow: $defaultShadow;
+                width: 434px;
+                height: 158px;
+                float: left;
+                vertical-align: top;
+                text-align: left;
+                padding: 25px 20px;
+            }
+            
+            .circle {
+                display: inline-block;
+                border-radius: 50%;
+                width: 52px;
+                height: 52px;
+                margin: 0px 20px 25px 0px;
+                vertical-align: top;
+            }
+
+            // 1st statistics box
+            .statistic:nth-child(1) {
+                margin-right: 16px;
+                background-color:  #a4d882;
+                
+                .circle {
+                    background-color:  #96c576;
+                }
+            }
+
+            // 2nd statistics box
+            .statistic:nth-child(2) {
+                margin-right: 17px;
+                margin-left: 17px;
+                background-color:  #5ba2e4;
+
+                .circle {
+                    background-color:  #5494cf;
+                }
+
+                img {
+                    padding: 14px 16px;
+                }
+            }
+
+            // 3rd statistics box
+            .statistic:nth-child(3) {
+                margin-left: 16px;
+                background-color:  #f0d648;
+                
+                .circle {
+                    background-color:  #e2c93e;
+                }
+
+                img {
+                    padding: 14px 16px;
+                }
+            }
+
+            .stat {
+                display: inline-block;
+                font-family: $defaultFont;
+                color:  white;
+                font-size: 21px;
+                font-weight: 400;
+                text-align: left;
+                margin: 4px 0px;
+                vertical-align: top;
+            }
+
+            span {
+                display: block;
+                font-size: 14px;
+                font-weight: 300;
+            }
+
+            .results {
+                font-family: $defaultFont;
+                color:  white;
+                font-size: 14px;
+                font-weight: 400;
+                margin: 0px;
+                padding: 15px 0px 0px;
+                border-top: 1px solid rgba(255, 255, 255, 0.43);
+            }
+        }
+
+        // Location images
+        .location-img {
+            display: inline-block;
+            margin: 15px;
+            padding: 0px;
+            vertical-align: top;
+        }
+
+        // Mailbox
+        .mailbox {
+            display: inline-block;
+            margin: 15px;
+            width: 434px;
+            height: 1014px;
+            background-color: $windowColor;
+            box-shadow: $defaultShadow;
+            text-align: left;
+            
+            .title {
+                display: inline-block;
+                font-family: $defaultFont;
+                color:  #3c3c3c;
+                font-size: 16px;
+                font-weight: 400;
+                margin: 15px 30px;
+            }
+            
+            .options {
+                margin: 15px 25px;
+                padding: 0px 6px;
+                float: right;
+            }
+
+            // Boxes
+            .box {
+                height: 138px;
+                position: relative;
+
+                .line {
+                    background-color:  rgba(48, 57, 63, 0.08);
+                    width: 394px;
+                    height: 1px;
+                    margin: 0 auto;
+                }
+
+                .circle {
+                    display: inline-block;
+                    border-radius: 50%;
+                    background-color:  black;
+                    width: 50px;
+                    height: 50px;
+                    margin: 0px;
+                    position: absolute;
+                    top: 35px;
+                    left: 70px;
+                }
+                
+                .sender {
+                    display: inline-block;
+                    font-family: $defaultFont;
+                    color:  #37474f;
+                    font-size: 14px;
+                    font-weight: 400;
+                    text-align: left;
+                    margin: 0px;
+                    position: absolute;
+                    top: 38px;
+                    left: 135px;
+                }
+
+                .time {
+                    display: block;
+                    font-family: $defaultFont;
+                    color:  #a7b0b8;
+                    font-size: 12px;
+                    font-weight: 300;
+                    text-align: left;
+                    margin-top: 2px;
+                }
+
+                .message {
+                    display: block;
+                    font-family: $defaultFont;
+                    color:  #76838f;
+                    font-size: 14px;
+                    font-weight: 300;
+                    text-align: left;
+                    margin-top: 7px;
+                }
+
+                .checkbox {
+                    visibility: hidden;
+                }
+
+                label {
+                    position: absolute;
+                    width: 24px;
+                    height: 24px;
+                    top: 50px;
+                    left: 20px;
+                    border-radius: 3px;
+                    border-style: solid;
+                    border-width: 1px;
+                    border-color:  #e3e6ea;
+                    background-color: white;
+                    cursor: pointer;
+                    z-index: 1;
+                }
+
+                .checkbox:checked + label {
+                    background-image: url(images/check.png);
+                    background-repeat: no-repeat;
+                    background-position: 7px 8px;
+                }
+
+                // Selected mail
+                &.active {
+                    background-color:  #5ba2e4;
+
+                    .sender, .time, .message {
+                        color: white;
+                    }
+
+                    .line {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

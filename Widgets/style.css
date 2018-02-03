@@ -4,8 +4,20 @@
 
 body {
   margin: 0px;
-  padding: 0px;
+  padding: 0px 0px 0px 82px;
   background-color: #F1F7FA;
+  width: 100%;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  overflow: hidden;
 }
 
 header .divider {
@@ -24,10 +36,6 @@ header {
 
 header #toggle {
   padding: 5px;
-  border: none;
-  background-color: transparent;
-  overflow: hidden;
-  cursor: pointer;
   float: left;
   margin: 24px;
 }
@@ -98,7 +106,7 @@ header .divider {
 
 header .profile {
   display: inline-block;
-  margin: 18px 22px 22px;
+  margin: 18px 0px 0px 22px;
   padding: 5px;
 }
 
@@ -128,6 +136,7 @@ header .profile .online {
 
 header .profile .name, header .profile .admin {
   text-align: left;
+  font-family: "Open Sans";
   font-weight: 300;
   margin: 0px;
   padding: 0px;
@@ -135,7 +144,6 @@ header .profile .name, header .profile .admin {
 
 header .profile .name {
   display: inline-block;
-  font-family: "Open Sans";
   color: #3c3c3c;
   font-size: 17px;
   margin: 4px 0px 0px 15px;
@@ -143,14 +151,13 @@ header .profile .name {
 
 header .profile .admin {
   display: block;
-  font-family: "Open Sans";
   color: #757575;
   font-size: 14px;
 }
 
 header .notifications {
   float: right;
-  margin: 38px 2px 32px 32px;
+  margin: 38px 2px 0px 0px;
 }
 
 header .notifications .message, header .notifications .notification {
@@ -162,10 +169,6 @@ header .notifications .message, header .notifications .notification {
   text-align: left;
   margin: 0px 36px 0px 0px;
   position: relative;
-}
-
-header .notifications .message:link, header .notifications .message:visited, header .notifications .notification:link, header .notifications .notification:visited {
-  text-decoration: none;
 }
 
 header .notifications .message img, header .notifications .notification img {
@@ -195,4 +198,316 @@ header .notifications .message span, header .notifications .notification span {
   font-weight: 400;
   text-align: center;
   vertical-align: top;
+}
+
+main {
+  display: inline-block;
+  width: 100%;
+  margin: 0px;
+  padding: 15px 0px;
+  text-align: center;
+}
+
+@media (min-width: 1400px) {
+  main .profile {
+    display: inline-block;
+    width: 434px;
+    height: 510px;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    margin: 15px;
+    overflow: hidden;
+  }
+  main .profile .info {
+    width: 100%;
+    padding: 45px 0px 40px;
+  }
+  main .profile .avatar {
+    margin: 0 auto 30px;
+    border-radius: 50%;
+    background-color: #e4e4e4;
+    width: 129px;
+    height: 129px;
+    position: relative;
+  }
+  main .profile .avatar .online {
+    display: inline-block;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: #ffffff;
+    background-color: #547df9;
+    width: 17px;
+    height: 17px;
+    border-width: 3px;
+    position: absolute;
+    bottom: 5px;
+    right: 16px;
+  }
+  main .profile .name, main .profile .admin {
+    text-align: center;
+    font-family: "Open Sans";
+    font-weight: 300;
+    margin: 0px;
+    padding: 0px;
+  }
+  main .profile .name {
+    display: inline-block;
+    color: #3c3c3c;
+    font-size: 19px;
+  }
+  main .profile .admin {
+    display: block;
+    color: #757575;
+    font-size: 14px;
+  }
+  main .profile .details {
+    display: inline-block;
+    width: 50%;
+    padding: 21px 0px 21px 55px;
+    border-top: 1px solid #f1f1f1;
+  }
+  main .profile .details p {
+    font-family: "Open Sans";
+    color: #4c5e70;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+    margin: 0px;
+  }
+  main .profile .details span {
+    display: block;
+    font-family: "Open Sans";
+    color: #9eb1c3;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 12px;
+    text-align: left;
+    padding-bottom: 7px;
+  }
+  main .profile .details:nth-child(2), main .profile .details:nth-child(4) {
+    float: left;
+    border-right: 1px solid #f1f1f1;
+  }
+  main .profile .details:nth-child(3), main .profile .details:nth-child(5) {
+    float: right;
+  }
+  main .profile .details:nth-child(4), main .profile .details:nth-child(5) {
+    border-bottom: 1px solid #f1f1f1;
+  }
+  main .profile a {
+    display: inline-block;
+    margin: 21px;
+    font-family: "Open Sans";
+    color: #547df9;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 14.4px;
+  }
+  main .statistics-img {
+    display: inline-block;
+    margin: 15px;
+    padding: 0px;
+    vertical-align: top;
+    width: 901px;
+    height: 516px;
+  }
+  main .statistics-bar {
+    display: inline-block;
+    margin: 15px;
+    width: 1368px;
+    clear: both;
+    vertical-align: top;
+  }
+  main .statistics-bar .statistic {
+    background-color: #a4d882;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
+    width: 434px;
+    height: 158px;
+    float: left;
+    vertical-align: top;
+    text-align: left;
+    padding: 25px 20px;
+  }
+  main .statistics-bar .circle {
+    display: inline-block;
+    border-radius: 50%;
+    width: 52px;
+    height: 52px;
+    margin: 0px 20px 25px 0px;
+    vertical-align: top;
+  }
+  main .statistics-bar .statistic:nth-child(1) {
+    margin-right: 16px;
+    background-color: #a4d882;
+  }
+  main .statistics-bar .statistic:nth-child(1) .circle {
+    background-color: #96c576;
+  }
+  main .statistics-bar .statistic:nth-child(2) {
+    margin-right: 17px;
+    margin-left: 17px;
+    background-color: #5ba2e4;
+  }
+  main .statistics-bar .statistic:nth-child(2) .circle {
+    background-color: #5494cf;
+  }
+  main .statistics-bar .statistic:nth-child(2) img {
+    padding: 14px 16px;
+  }
+  main .statistics-bar .statistic:nth-child(3) {
+    margin-left: 16px;
+    background-color: #f0d648;
+  }
+  main .statistics-bar .statistic:nth-child(3) .circle {
+    background-color: #e2c93e;
+  }
+  main .statistics-bar .statistic:nth-child(3) img {
+    padding: 14px 16px;
+  }
+  main .statistics-bar .stat {
+    display: inline-block;
+    font-family: "Open Sans";
+    color: white;
+    font-size: 21px;
+    font-weight: 400;
+    text-align: left;
+    margin: 4px 0px;
+    vertical-align: top;
+  }
+  main .statistics-bar span {
+    display: block;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  main .statistics-bar .results {
+    font-family: "Open Sans";
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0px;
+    padding: 15px 0px 0px;
+    border-top: 1px solid rgba(255, 255, 255, 0.43);
+  }
+  main .location-img {
+    display: inline-block;
+    margin: 15px;
+    padding: 0px;
+    vertical-align: top;
+  }
+  main .mailbox {
+    display: inline-block;
+    margin: 15px;
+    width: 434px;
+    height: 1014px;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
+    text-align: left;
+  }
+  main .mailbox .title {
+    display: inline-block;
+    font-family: "Open Sans";
+    color: #3c3c3c;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 15px 30px;
+  }
+  main .mailbox .options {
+    margin: 15px 25px;
+    padding: 0px 6px;
+    float: right;
+  }
+  main .mailbox .box {
+    height: 138px;
+    position: relative;
+  }
+  main .mailbox .box .line {
+    background-color: rgba(48, 57, 63, 0.08);
+    width: 394px;
+    height: 1px;
+    margin: 0 auto;
+  }
+  main .mailbox .box .circle {
+    display: inline-block;
+    border-radius: 50%;
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    margin: 0px;
+    position: absolute;
+    top: 35px;
+    left: 70px;
+  }
+  main .mailbox .box .sender {
+    display: inline-block;
+    font-family: "Open Sans";
+    color: #37474f;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+    margin: 0px;
+    position: absolute;
+    top: 38px;
+    left: 135px;
+  }
+  main .mailbox .box .time {
+    display: block;
+    font-family: "Open Sans";
+    color: #a7b0b8;
+    font-size: 12px;
+    font-weight: 300;
+    text-align: left;
+    margin-top: 2px;
+  }
+  main .mailbox .box .message {
+    display: block;
+    font-family: "Open Sans";
+    color: #76838f;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: left;
+    margin-top: 7px;
+  }
+  main .mailbox .box .checkbox {
+    visibility: hidden;
+  }
+  main .mailbox .box label {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 50px;
+    left: 20px;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #e3e6ea;
+    background-color: white;
+    cursor: pointer;
+    z-index: 1;
+  }
+  main .mailbox .box .checkbox:checked + label {
+    background-image: url(images/check.png);
+    background-repeat: no-repeat;
+    background-position: 7px 8px;
+  }
+  main .mailbox .box.active {
+    background-color: #5ba2e4;
+  }
+  main .mailbox .box.active .sender, main .mailbox .box.active .time, main .mailbox .box.active .message {
+    color: white;
+  }
+  main .mailbox .box.active .line {
+    display: none;
+  }
+}
+
+aside {
+  width: 82px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: 2000px;
+  background-color: #212a32;
 }

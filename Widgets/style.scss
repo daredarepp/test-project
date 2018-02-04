@@ -24,8 +24,14 @@ body {
     width: 100%;
 }
 
-a:link, a:visited {
-    text-decoration: none;
+a {
+    &:link, &:visited {
+        text-decoration: none;
+    }
+
+    &:active {
+        outline: none;
+    }
 }
 
 button {

@@ -4,13 +4,24 @@
 
 body {
   margin: 0px;
-  padding: 0px;
+  padding: 0px 0px 0px 82px;
   background-color: #F1F7FA;
+  width: 100%;
 }
 
-header .divider {
-  height: 1px;
-  width: 100%;
+a:link, a:visited {
+  text-decoration: none;
+}
+
+a:active {
+  outline: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  overflow: hidden;
 }
 
 header {
@@ -24,10 +35,6 @@ header {
 
 header #toggle {
   padding: 5px;
-  border: none;
-  background-color: transparent;
-  overflow: hidden;
-  cursor: pointer;
   float: left;
   margin: 24px;
 }
@@ -92,13 +99,15 @@ header #search button {
 }
 
 header .divider {
+  height: 1px;
+  width: 100%;
   clear: both;
   background-color: #f1f1f1;
 }
 
 header .profile {
   display: inline-block;
-  margin: 18px 22px 22px;
+  margin: 18px 0px 0px 22px;
   padding: 5px;
 }
 
@@ -128,6 +137,7 @@ header .profile .online {
 
 header .profile .name, header .profile .admin {
   text-align: left;
+  font-family: "Open Sans";
   font-weight: 300;
   margin: 0px;
   padding: 0px;
@@ -135,7 +145,6 @@ header .profile .name, header .profile .admin {
 
 header .profile .name {
   display: inline-block;
-  font-family: "Open Sans";
   color: #3c3c3c;
   font-size: 17px;
   margin: 4px 0px 0px 15px;
@@ -143,14 +152,13 @@ header .profile .name {
 
 header .profile .admin {
   display: block;
-  font-family: "Open Sans";
   color: #757575;
   font-size: 14px;
 }
 
 header .notifications {
   float: right;
-  margin: 38px 2px 32px 32px;
+  margin: 38px 2px 0px 0px;
 }
 
 header .notifications .message, header .notifications .notification {
@@ -162,10 +170,6 @@ header .notifications .message, header .notifications .notification {
   text-align: left;
   margin: 0px 36px 0px 0px;
   position: relative;
-}
-
-header .notifications .message:link, header .notifications .message:visited, header .notifications .notification:link, header .notifications .notification:visited {
-  text-decoration: none;
 }
 
 header .notifications .message img, header .notifications .notification img {
@@ -195,4 +199,337 @@ header .notifications .message span, header .notifications .notification span {
   font-weight: 400;
   text-align: center;
   vertical-align: top;
+}
+
+main {
+  display: inline-block;
+  width: 100%;
+  margin: 0px;
+  padding: 15px 0px 50px;
+  text-align: center;
+}
+
+main .blog {
+  display: inline-block;
+  background-color: white;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
+  width: 1355px;
+  height: 1296px;
+  padding: 25px;
+  margin: 15px;
+  overflow: hidden;
+}
+
+main .blog .title {
+  font-family: "Open Sans";
+  color: #3c3c3c;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
+  transform: scaleY(1.1279);
+  padding: 10px 10px 20px;
+  margin: 0px;
+  border-bottom: 2px solid #eeeeee;
+}
+
+main .blog .articles {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(417px, 1fr));
+  grid-template-rows: repeat(auto-fit, 1fr);
+  grid-gap: 45px 25px;
+  justify-items: center;
+  padding: 40px 0px;
+}
+
+main .blog .articles .box {
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
+  width: 417px;
+  height: 527px;
+  padding: 0px;
+  margin: 0px;
+  text-align: left;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+main .blog .articles .box .background {
+  width: 100%;
+  height: 236px;
+  background-color: #f6f6f6;
+}
+
+main .blog .articles .box .content {
+  width: 100%;
+  background-color: white;
+  padding: 30px 70px 30px 25px;
+}
+
+main .blog .articles .box .content .box-title {
+  font-family: "Open Sans";
+  color: #292929;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  text-align: left;
+  padding: 0px;
+  margin: 0px 0px 20px;
+}
+
+main .blog .articles .box .content .line {
+  background-color: #e5e5e5;
+  width: 29px;
+  height: 2px;
+  margin: 0px 0px 20px;
+}
+
+main .blog .articles .box .content .text {
+  font-family: "Open Sans";
+  color: #626262;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+  text-align: left;
+  padding: 0px;
+  margin: 0px 0px 25px;
+}
+
+main .blog .articles .box .content .more {
+  display: inline-block;
+  border-radius: 3px;
+  background-color: #547df9;
+  color: white;
+  width: 113px;
+  height: 36px;
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+  text-align: center;
+  margin: 0px;
+  padding: 5px 0px;
+}
+
+main .blog .articles .box .content .more:hover {
+  background-color: #4b70e0;
+}
+
+aside {
+  width: 250px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #212a32;
+  padding: 15px 10px;
+}
+
+aside.shadow {
+  background: linear-gradient(90deg, transparent 87%, rgba(0, 0, 0, 0.01) 88%, rgba(0, 0, 0, 0.3) 100%);
+  background-color: #212a32;
+}
+
+aside .logo {
+  display: inline-block;
+  margin: 0px 0px 0px 6px;
+}
+
+aside .title {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 1px;
+  text-align: left;
+  vertical-align: top;
+  margin: 15px 0px 0px 15px;
+}
+
+aside nav {
+  margin-top: 30px;
+}
+
+aside nav > a {
+  display: inline-block;
+  height: 64px;
+  width: 100%;
+  margin: 3px 0px;
+  border-radius: 5px;
+  clear: both;
+}
+
+aside nav > a:hover {
+  background-color: rgba(0, 0, 0, 0.09);
+}
+
+aside nav > a.active {
+  background-color: #2a3845;
+}
+
+aside nav > a.current {
+  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.15);
+}
+
+aside nav > a.current .plus {
+  display: none;
+}
+
+aside nav > a.current .minus {
+  display: inline-block;
+}
+
+aside nav > a .circle {
+  display: inline-block;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.09);
+  width: 34px;
+  height: 34px;
+  margin: 15px 0px 0px 14px;
+  overflow: hidden;
+}
+
+aside nav > a .circle img {
+  width: 16px;
+  height: 16px;
+  margin: 9px;
+}
+
+aside nav > a .name {
+  display: inline-block;
+  font-family: "Open Sans";
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: left;
+  vertical-align: top;
+  margin: 21px 0px 0px 15px;
+}
+
+aside nav > a .plus, aside nav > a .minus {
+  display: inline-block;
+  width: 15px;
+  float: right;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  margin: 20px 25px 0px;
+  text-align: center;
+}
+
+aside nav > a .minus {
+  display: none;
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+aside nav > a.logout {
+  display: inline-block;
+  width: 100%;
+  height: 66px;
+  margin: 0px;
+  border-radius: 0;
+  background-color: #1e2429;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+aside nav > a.logout.shadow {
+  background: linear-gradient(90deg, transparent 87%, rgba(0, 0, 0, 0.01) 88%, rgba(0, 0, 0, 0.3) 100%);
+  background-color: #1e2429;
+}
+
+aside nav > a.logout img {
+  margin: 25px 0px 0px 25px;
+  vertical-align: bottom;
+}
+
+aside nav > a.logout span {
+  display: inline-block;
+  font-family: "Open Sans";
+  color: #4f5a62;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  margin-left: 10px;
+}
+
+aside nav .col2 {
+  display: none;
+  width: 261px;
+  padding: 50px 20px;
+  background-color: #2a3845;
+  position: absolute;
+  top: 0;
+  left: 230px;
+  z-index: 1;
+}
+
+aside nav .col2.visible {
+  display: block;
+}
+
+aside nav .col2 > a {
+  display: inline-block;
+  width: 221px;
+  height: 36px;
+  margin: 4px 0px;
+  padding: 8px 10px;
+  font-family: "Open Sans";
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 5px;
+  text-align: left;
+  position: relative;
+}
+
+aside nav .col2 > a:hover {
+  background-color: rgba(0, 0, 0, 0.09);
+}
+
+aside nav .col2 > a.active {
+  background-color: #496fdf;
+}
+
+aside nav .col2 > a .dot {
+  border-radius: 50%;
+  background-color: #ffffff;
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  top: 14px;
+  right: 10px;
+}
+
+aside.small {
+  width: 82px;
+  padding: 0px;
+  text-align: center;
+}
+
+aside.small a {
+  border-radius: 0;
+}
+
+aside.small a.active {
+  background-color: #547df9;
+  box-shadow: none;
+}
+
+aside.small .title, aside.small nav span, aside.small .logout span {
+  display: none;
+}
+
+aside.small .logo, aside.small nav .circle {
+  margin: 15px 0px 0px;
+}
+
+aside.small .logout img {
+  margin: 25px 0px 0px;
 }

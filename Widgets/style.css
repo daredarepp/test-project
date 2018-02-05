@@ -314,7 +314,7 @@ main .profile .details:nth-child(4), main .profile .details:nth-child(5) {
 
 main .profile a {
   display: inline-block;
-  margin: 21px;
+  margin: 24px;
   font-family: "Open Sans";
   color: #547df9;
   font-size: 14px;

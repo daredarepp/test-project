@@ -1,11 +1,46 @@
+$windowColor: #ffffff;
+$defaultFont: 'Open Sans';
+$defaultShadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
+
+// Online circle
+@mixin online($radius) {
+    display: inline-block;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: $windowColor;
+    background-color:  #547df9;
+    width: $radius;
+    height: $radius;
+}
+
 * {
     box-sizing: border-box;
 }
 
 body {
     margin: 0px;
-    padding: 0px;
+    padding: 0px 0px 0px 82px;
     background-color: #F1F7FA;
+    width: 100%;
+}
+
+a {
+    &:link, &:visited {
+        text-decoration: none;
+    }
+
+    &:active {
+        outline: none;
+    }
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    overflow: hidden;
 }
 
 @import 'header';
+@import 'main';
+@import 'sidebar';

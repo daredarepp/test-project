@@ -1,27 +1,7 @@
-$windowColor: #ffffff;
-$defaultFont: 'Open Sans';
-
-// Online circle
-@mixin online($radius) {
-    display: inline-block;
-    border-radius: 50%;
-    border-style: solid;
-    border-color: $windowColor;
-    background-color:  #547df9;
-    width: $radius;
-    height: $radius;
-}
-
-// Divider line
-%divider {
-    height: 1px;
-    width: 100%;
-}
-
 // Header
 header {
     background-color: $windowColor;
-    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
+    box-shadow: $defaultShadow;
     width: 100%;
     height: 171px;
     overflow: hidden;
@@ -31,10 +11,6 @@ header {
     // Toggle button
     #toggle {
         padding: 5px;
-        border: none;
-        background-color: transparent;
-        overflow: hidden;
-        cursor: pointer;
         float: left;
         margin: 24px;
         
@@ -101,7 +77,8 @@ header {
 
     // Divider
     .divider {
-        @extend %divider;
+        height: 1px;
+        width: 100%;
         clear: both;
         background-color:  #f1f1f1;
     }
@@ -109,7 +86,7 @@ header {
     // Profile
     .profile {
         display: inline-block;
-        margin: 18px 22px 22px;
+        margin: 18px 0px 0px 22px;
         padding: 5px;
 
         .avatar {
@@ -132,6 +109,7 @@ header {
 
         .name, .admin {
             text-align: left;
+            font-family: $defaultFont;
             font-weight: 300;
             margin: 0px;
             padding: 0px;
@@ -139,7 +117,6 @@ header {
 
         .name {
             display: inline-block;
-            font-family: $defaultFont;
             color:  #3c3c3c;
             font-size: 17px;
             margin: 4px 0px 0px 15px;
@@ -147,16 +124,16 @@ header {
 
         .admin {
             display: block;
-            font-family: $defaultFont;
             color:  #757575;
             font-size: 14px;
         }
+        
     }
 
     // Messages
     .notifications {
         float: right;
-        margin: 38px 2px 32px 32px;
+        margin: 38px 2px 0px 0px;;
 
         .message, .notification {
             display: inline-block;
@@ -167,10 +144,6 @@ header {
             text-align: left;
             margin: 0px 36px 0px 0px;
             position: relative;
-
-            &:link, &:visited {
-                text-decoration: none;
-            }
     
             img {
                 vertical-align: middle;

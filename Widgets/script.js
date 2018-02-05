@@ -12,7 +12,7 @@ $(document).ready(function() {
     extend();
     function extend() {
 
-        var totalHeight = header.innerHeight() + main.innerHeight();
+        var totalHeight = $('body').innerHeight();
         sidebar.css({'height': `${totalHeight}px`});
         col2.css({'height': `${totalHeight}px`});
     }

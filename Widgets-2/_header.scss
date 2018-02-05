@@ -1,0 +1,177 @@
+// Divider line
+%divider {
+    height: 1px;
+    width: 100%;
+}
+
+// Header
+header {
+    background-color: $windowColor;
+    box-shadow: $defaultShadow;
+    width: 100%;
+    height: 171px;
+    overflow: hidden;
+    clear: both;
+
+
+    // Toggle button
+    #toggle {
+        padding: 5px;
+        float: left;
+        margin: 24px;
+        
+        .line {
+            width: 16px;
+            height: 2px;
+            margin-bottom: 3px;
+            background-color:  #afb5b9;
+        }
+        
+        .line:nth-of-type(3) {
+            margin-bottom: 0px;
+        }
+    }
+
+    // Search form
+    #search {
+        border-style: solid;
+        border-width: 1px;
+        border-color:  #ebebeb;
+        border-radius: 25px;
+        width: 340px;
+        height: 36px;
+        background-color:  rgba(236, 239, 241, 0);
+        position: relative;
+        float: right;
+        margin: 17px 30px;
+
+        input {
+            color:  #c6c6c6;
+            font-family: $defaultFont;
+            font-size: 14px;
+            font-weight: 400;
+            text-align: left;
+            border: none;
+            height: 30px;
+            width: 260px;
+            position: absolute;
+            top: 2px;
+            left: 25px;
+            padding-bottom: 3px;
+        }
+
+        ::placeholder {
+            color: #c6c6c6;
+            opacity: 1;
+        }
+
+        button {
+            margin: 0px;
+            padding: 0px;
+            background-color: transparent;
+            border: none;
+            width: 30px;
+            height: 30px;
+            padding: 7px;
+            overflow: hidden;
+            cursor: pointer;
+            position: absolute;
+            top: 2px;
+            right: 10px;
+        }
+    }
+
+    // Divider
+    .divider {
+        @extend %divider;
+        clear: both;
+        background-color:  #f1f1f1;
+    }
+
+    // Profile
+    .profile {
+        display: inline-block;
+        margin: 18px 0px 0px 22px;
+        padding: 5px;
+
+        .avatar {
+            display: inline-block;
+            border-radius: 50%;
+            background-color:  #f0f0f0;
+            width: 50px;
+            height: 50px;
+            position: relative;
+            vertical-align: top;
+        }
+
+        .online {
+            @include online(11px);
+            border-width: 2px;
+            position: absolute;
+            top: 1px;
+            right: 1px;
+        }
+
+        .name, .admin {
+            text-align: left;
+            font-family: $defaultFont;
+            font-weight: 300;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .name {
+            display: inline-block;
+            color:  #3c3c3c;
+            font-size: 17px;
+            margin: 4px 0px 0px 15px;
+        }
+
+        .admin {
+            display: block;
+            color:  #757575;
+            font-size: 14px;
+        }
+        
+    }
+
+    // Messages
+    .notifications {
+        float: right;
+        margin: 38px 2px 0px 0px;;
+
+        .message, .notification {
+            display: inline-block;
+            font-family: $defaultFont;
+            color:  #3c3c3c;
+            font-size: 15px;
+            font-weight: 300;
+            text-align: left;
+            margin: 0px 36px 0px 0px;
+            position: relative;
+    
+            img {
+                vertical-align: middle;
+                margin: 0px 0px 0px 12px;
+            }
+
+            .online {
+                @include online(22px);
+                border-width: 3px;
+                position: absolute;
+                top: -11px;
+                right: -11px;
+                text-align: center;
+            }
+
+            span {
+                font-family: $defaultFont;
+                color: white;
+                font-size: 10px;
+                font-weight: 400;
+                text-align: center;
+                vertical-align: top;
+            }
+        }
+    }
+}

@@ -207,28 +207,38 @@ header .notifications .message span, header .notifications .notification span {
 main {
   display: inline-block;
   width: 100%;
+  max-height: 1850px;
+  overflow: hidden;
   margin: 0px;
   padding: 15px 0px 50px;
   text-align: center;
 }
 
-main .profile {
+main .group {
+  display: inline-block;
+  max-width: 1370px;
+  margin: 15px;
+  clear: both;
+}
+
+main .group .profile {
   display: inline-block;
   width: 434px;
   height: 510px;
   background-color: #ffffff;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
   text-align: center;
-  margin: 15px;
+  margin: 0px 15px 15px 0px;
+  float: left;
   overflow: hidden;
 }
 
-main .profile .info {
+main .group .profile .info {
   width: 100%;
   padding: 45px 0px 40px;
 }
 
-main .profile .avatar {
+main .group .profile .avatar {
   margin: 0 auto 30px;
   border-radius: 50%;
   background-color: #e4e4e4;
@@ -237,7 +247,7 @@ main .profile .avatar {
   position: relative;
 }
 
-main .profile .avatar .online {
+main .group .profile .avatar .online {
   display: inline-block;
   border-radius: 50%;
   border-style: solid;
@@ -251,7 +261,7 @@ main .profile .avatar .online {
   right: 16px;
 }
 
-main .profile .name, main .profile .admin {
+main .group .profile .name, main .group .profile .admin {
   text-align: center;
   font-family: "Open Sans";
   font-weight: 300;
@@ -259,26 +269,26 @@ main .profile .name, main .profile .admin {
   padding: 0px;
 }
 
-main .profile .name {
+main .group .profile .name {
   display: inline-block;
   color: #3c3c3c;
   font-size: 19px;
 }
 
-main .profile .admin {
+main .group .profile .admin {
   display: block;
   color: #757575;
   font-size: 14px;
 }
 
-main .profile .details {
+main .group .profile .details {
   display: inline-block;
   width: 50%;
   padding: 21px 0px 21px 55px;
   border-top: 1px solid #f1f1f1;
 }
 
-main .profile .details p {
+main .group .profile .details p {
   font-family: "Open Sans";
   color: #4c5e70;
   font-size: 21px;
@@ -288,7 +298,7 @@ main .profile .details p {
   margin: 0px;
 }
 
-main .profile .details span {
+main .group .profile .details span {
   display: block;
   font-family: "Open Sans";
   color: #9eb1c3;
@@ -299,20 +309,20 @@ main .profile .details span {
   padding-bottom: 7px;
 }
 
-main .profile .details:nth-child(2), main .profile .details:nth-child(4) {
+main .group .profile .details:nth-child(2), main .group .profile .details:nth-child(4) {
   float: left;
   border-right: 1px solid #f1f1f1;
 }
 
-main .profile .details:nth-child(3), main .profile .details:nth-child(5) {
+main .group .profile .details:nth-child(3), main .group .profile .details:nth-child(5) {
   float: right;
 }
 
-main .profile .details:nth-child(4), main .profile .details:nth-child(5) {
+main .group .profile .details:nth-child(4), main .group .profile .details:nth-child(5) {
   border-bottom: 1px solid #f1f1f1;
 }
 
-main .profile a {
+main .group .profile a {
   display: inline-block;
   margin: 24px;
   font-family: "Open Sans";
@@ -322,25 +332,24 @@ main .profile a {
   line-height: 14.4px;
 }
 
-main .statistics-img {
+main .group .statistics-img {
   display: inline-block;
-  margin: 15px;
+  margin: 0px 0px 15px 15px;
   padding: 0px;
-  vertical-align: top;
   width: 901px;
   height: 516px;
+  float: right;
 }
 
-main .statistics-bar {
+main .group .statistics-bar {
   display: inline-block;
-  margin: 15px;
+  margin: 15px 0px;
   width: 1368px;
   text-align: center;
   clear: both;
-  vertical-align: top;
 }
 
-main .statistics-bar .statistic {
+main .group .statistics-bar .statistic {
   display: inline-block;
   background-color: #a4d882;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
@@ -348,12 +357,11 @@ main .statistics-bar .statistic {
   width: 31.72515%;
   height: 158px;
   float: left;
-  vertical-align: top;
   text-align: left;
   padding: 25px 20px;
 }
 
-main .statistics-bar .circle {
+main .group .statistics-bar .circle {
   display: inline-block;
   border-radius: 50%;
   width: 52px;
@@ -362,43 +370,43 @@ main .statistics-bar .circle {
   vertical-align: top;
 }
 
-main .statistics-bar .statistic:nth-child(1) {
+main .group .statistics-bar .statistic:nth-child(1) {
   margin-right: 16px;
   background-color: #a4d882;
 }
 
-main .statistics-bar .statistic:nth-child(1) .circle {
+main .group .statistics-bar .statistic:nth-child(1) .circle {
   background-color: #96c576;
 }
 
-main .statistics-bar .statistic:nth-child(2) {
+main .group .statistics-bar .statistic:nth-child(2) {
   margin-right: 16px;
   margin-left: 16px;
   background-color: #5ba2e4;
 }
 
-main .statistics-bar .statistic:nth-child(2) .circle {
+main .group .statistics-bar .statistic:nth-child(2) .circle {
   background-color: #5494cf;
 }
 
-main .statistics-bar .statistic:nth-child(2) img {
+main .group .statistics-bar .statistic:nth-child(2) img {
   padding: 14px 16px;
 }
 
-main .statistics-bar .statistic:nth-child(3) {
+main .group .statistics-bar .statistic:nth-child(3) {
   margin-left: 16px;
   background-color: #f0d648;
 }
 
-main .statistics-bar .statistic:nth-child(3) .circle {
+main .group .statistics-bar .statistic:nth-child(3) .circle {
   background-color: #e2c93e;
 }
 
-main .statistics-bar .statistic:nth-child(3) img {
+main .group .statistics-bar .statistic:nth-child(3) img {
   padding: 14px 16px;
 }
 
-main .statistics-bar .stat {
+main .group .statistics-bar .stat {
   display: inline-block;
   font-family: "Open Sans";
   color: white;
@@ -409,13 +417,13 @@ main .statistics-bar .stat {
   vertical-align: top;
 }
 
-main .statistics-bar span {
+main .group .statistics-bar span {
   display: block;
   font-size: 14px;
   font-weight: 300;
 }
 
-main .statistics-bar .results {
+main .group .statistics-bar .results {
   font-family: "Open Sans";
   color: white;
   font-size: 14px;
@@ -425,24 +433,25 @@ main .statistics-bar .results {
   border-top: 1px solid rgba(255, 255, 255, 0.43);
 }
 
-main .location-img {
+main .group .location-img {
   display: inline-block;
-  margin: 15px;
+  margin: 15px 15px 0px 0px;
+  float: left;
   padding: 0px;
-  vertical-align: top;
 }
 
-main .mailbox {
+main .group .mailbox {
   display: inline-block;
-  margin: 15px;
   width: 434px;
   height: 1014px;
   background-color: #ffffff;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
   text-align: left;
+  margin: 15px 0px 0px 15px;
+  float: right;
 }
 
-main .mailbox .title {
+main .group .mailbox .title {
   display: inline-block;
   font-family: "Open Sans";
   color: #3c3c3c;
@@ -451,25 +460,25 @@ main .mailbox .title {
   margin: 15px 30px;
 }
 
-main .mailbox .options {
+main .group .mailbox .options {
   margin: 15px 25px;
   padding: 0px 6px;
   float: right;
 }
 
-main .mailbox .box {
+main .group .mailbox .box {
   height: 138px;
   position: relative;
 }
 
-main .mailbox .box .line {
+main .group .mailbox .box .line {
   background-color: rgba(48, 57, 63, 0.08);
   width: 394px;
   height: 1px;
   margin: 0 auto;
 }
 
-main .mailbox .box .circle {
+main .group .mailbox .box .circle {
   display: inline-block;
   border-radius: 50%;
   background-color: black;
@@ -481,7 +490,7 @@ main .mailbox .box .circle {
   left: 70px;
 }
 
-main .mailbox .box .sender {
+main .group .mailbox .box .sender {
   display: inline-block;
   font-family: "Open Sans";
   color: #37474f;
@@ -494,7 +503,7 @@ main .mailbox .box .sender {
   left: 135px;
 }
 
-main .mailbox .box .time {
+main .group .mailbox .box .time {
   display: block;
   font-family: "Open Sans";
   color: #a7b0b8;
@@ -504,7 +513,7 @@ main .mailbox .box .time {
   margin-top: 2px;
 }
 
-main .mailbox .box .message {
+main .group .mailbox .box .message {
   display: block;
   font-family: "Open Sans";
   color: #76838f;
@@ -514,11 +523,11 @@ main .mailbox .box .message {
   margin-top: 7px;
 }
 
-main .mailbox .box .checkbox {
+main .group .mailbox .box .checkbox {
   visibility: hidden;
 }
 
-main .mailbox .box label {
+main .group .mailbox .box label {
   position: absolute;
   width: 24px;
   height: 24px;
@@ -533,21 +542,21 @@ main .mailbox .box label {
   z-index: 1;
 }
 
-main .mailbox .box .checkbox:checked + label {
+main .group .mailbox .box .checkbox:checked + label {
   background-image: url(images/check.png);
   background-repeat: no-repeat;
   background-position: 7px 8px;
 }
 
-main .mailbox .box.active {
+main .group .mailbox .box.active {
   background-color: #5ba2e4;
 }
 
-main .mailbox .box.active .sender, main .mailbox .box.active .time, main .mailbox .box.active .message {
+main .group .mailbox .box.active .sender, main .group .mailbox .box.active .time, main .group .mailbox .box.active .message {
   color: white;
 }
 
-main .mailbox .box.active .line {
+main .group .mailbox .box.active .line {
   display: none;
 }
 

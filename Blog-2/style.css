@@ -316,7 +316,8 @@ main .blog .articles .box .content .more {
 
 aside {
   width: 250px;
-  position: absolute;
+  height: 100%;
+  position: fixed;
   top: 0;
   left: 0;
   background-color: #212a32;
@@ -460,9 +461,10 @@ aside nav > a.logout span {
 aside nav .col2 {
   display: none;
   width: 261px;
+  height: 100%;
   padding: 50px 20px;
   background-color: #2a3845;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 230px;
   z-index: 1;

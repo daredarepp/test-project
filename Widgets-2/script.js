@@ -7,46 +7,7 @@ $(document).ready(function() {
     var logoutButton = $('.logout');
     var links1 = $('nav > a').not(logoutButton);
     var links2 = $('.col2 > a');
-
-    // Extend sidebar to bottom
-    extend();
-    function extend() {
-
-        var totalHeight = $('body').innerHeight();
-        sidebar.css({'height': `${totalHeight}px`});
-        col2.css({'height': `${totalHeight}px`});
-    }
-
-    // Create article samples
-    var articles = $('.articles');
-    for (i = 1; i <= 6; i++) {
-
-        let box = $('<div></div>');
-        box.addClass('box');
-        let background = $('<div></div>');
-        background.addClass('background');
-        box.append(background);
-        let content =$('<div></div>');
-        content.addClass('content');
-        box.append(content);
-        let title = $('<h3></h3>');
-        title.addClass('box-title');
-        title.text('An article (abbreviated art) is a word that is used');
-        content.append(title);
-        let line = $('<div></div>');
-        line.addClass('line');
-        content.append(line);
-        let text = $('<p></p>');
-        text.addClass('text');
-        text.text('In languages that employ articles, every common noun, with some exceptions, is expressed with definiteness (e.g. definite or indefinite)');
-        content.append(text);
-        let more = $('<a href="#"></a>');
-        more.addClass('more');
-        more.text('more');
-        content.append(more);
-        articles.append(box);
-    }
-
+    
     // Toggle sidebar
     function toggle() {
 
@@ -127,6 +88,38 @@ $(document).ready(function() {
         }
     }
 
+    // Create mails samples
+    var mailbox = $('.mailbox');
+    var names = ['Mark Thompson', 'Victor Ramsi', 'Ricardo P. Smith', 'Michael Lanson', 'Cassandra Stone', 'Anna Roy Palmer', 'Mark Tompson'];
+
+    names.forEach(function(name) {
+
+        let box = $('<div></div>');
+        box.addClass('box');
+        box.html('<div class="line"></div><div class="circle"></div>');
+        let sender = $('<p></p>');
+        sender.addClass('sender');
+        sender.text(name);
+        let time = $('<span></span>');
+        time.addClass('time');
+        time.text('3 minutes ago');
+        let message = $('<span></span>');
+        message.addClass('message');
+        message.text('Veniam marfa mustache skateboard ...');
+        sender.append(time);
+        sender.append(message);
+        let checkbox = $('<input type="checkbox"></input>');
+        checkbox.addClass('checkbox');
+        let id = name.replace(/[ ]/g, '').toLowerCase();
+        checkbox.attr('id', id);
+        let label = $('<label></label>');
+        label.attr('for', id);
+        box.append(sender);
+        box.append(checkbox);
+        box.append(label);
+        mailbox.append(box);
+    })
+
     // Prevent default actions on links and buttons
     $('a, button').on('click', function(event) {
 
@@ -150,4 +143,14 @@ $(document).ready(function() {
 
         highlight($(this));
     })
+
+    // Mails selection
+    $('.checkbox').change(function(){
+        
+        $(this).parent().toggleClass('active');
+    })
+
+    // Select 2nd mail
+    $('.checkbox').eq(1).attr('checked', true);
+    $('.box').eq(1).addClass('active');
 })

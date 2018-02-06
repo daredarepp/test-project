@@ -180,34 +180,31 @@ header .notifications .message img, header .notifications .notification img {
   margin: 0px 0px 0px 12px;
 }
 
-header .notifications .message .online, header .notifications .notification .online {
+header .notifications .message span, header .notifications .notification span {
   display: inline-block;
-  border-radius: 50%;
+  border-width: 3px;
   border-style: solid;
   border-color: #ffffff;
+  border-radius: 25px;
   background-color: #547df9;
-  width: 22px;
-  height: 22px;
-  border-width: 3px;
   position: absolute;
   top: -11px;
-  right: -11px;
+  left: 90%;
   text-align: center;
-}
-
-header .notifications .message span, header .notifications .notification span {
   font-family: "Open Sans";
   color: white;
   font-size: 10px;
   font-weight: 400;
-  text-align: center;
-  vertical-align: top;
+  height: 22px;
+  min-width: 22px;
+  max-width: 47px;
+  overflow: hidden;
+  padding: 0px 5px;
 }
 
 main {
   display: inline-block;
   width: 100%;
-  max-height: 1850px;
   overflow: hidden;
   margin: 0px;
   padding: 15px 0px 50px;

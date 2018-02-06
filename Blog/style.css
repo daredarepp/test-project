@@ -177,28 +177,26 @@ header .notifications .message img, header .notifications .notification img {
   margin: 0px 0px 0px 12px;
 }
 
-header .notifications .message .online, header .notifications .notification .online {
+header .notifications .message span, header .notifications .notification span {
   display: inline-block;
-  border-radius: 50%;
+  border-width: 3px;
   border-style: solid;
   border-color: #ffffff;
+  border-radius: 25px;
   background-color: #547df9;
-  width: 22px;
-  height: 22px;
-  border-width: 3px;
   position: absolute;
   top: -11px;
-  right: -11px;
+  left: 90%;
   text-align: center;
-}
-
-header .notifications .message span, header .notifications .notification span {
   font-family: "Open Sans";
   color: white;
   font-size: 10px;
   font-weight: 400;
-  text-align: center;
-  vertical-align: top;
+  height: 22px;
+  min-width: 22px;
+  max-width: 47px;
+  overflow: hidden;
+  padding: 0px 5px;
 }
 
 main {
@@ -207,7 +205,6 @@ main {
   margin: 0px;
   padding: 15px 0px 50px;
   text-align: center;
-  max-height: 1850px;
   overflow: hidden;
 }
 
@@ -216,7 +213,6 @@ main .blog {
   background-color: white;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
   width: 1355px;
-  height: 1296px;
   padding: 25px;
   margin: 15px;
   overflow: hidden;
@@ -229,7 +225,7 @@ main .blog .title {
   font-weight: 600;
   text-align: left;
   transform: scaleY(1.1279);
-  padding: 10px 10px 20px;
+  padding: 10px 10px 15px;
   margin: 0px;
   border-bottom: 2px solid #eeeeee;
 }
@@ -241,7 +237,7 @@ main .blog .articles {
   grid-template-rows: repeat(auto-fit, 1fr);
   grid-gap: 45px 25px;
   justify-items: center;
-  padding: 40px 0px;
+  padding: 40px 0px 50px;
 }
 
 main .blog .articles .box {

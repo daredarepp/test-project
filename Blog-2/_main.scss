@@ -4,7 +4,6 @@ main {
     margin: 0px;
     padding: 15px 0px 50px;
     text-align: center;
-    max-height: 1850px;
     overflow: hidden;
 
     .blog {
@@ -12,7 +11,6 @@ main {
         background-color:  white;
         box-shadow: $defaultShadow;
         width: 1355px;
-        height: 1296px;
         padding: 25px;
         margin: 15px;
         overflow: hidden;
@@ -24,7 +22,7 @@ main {
             font-weight: 600;
             text-align: left;
             transform: scaleY(1.1279);
-            padding: 10px 10px 20px;
+            padding: 10px 10px 15px;
             margin: 0px;
             border-bottom: 2px solid #eeeeee;
         }
@@ -36,7 +34,7 @@ main {
             grid-template-rows: repeat(auto-fit, 1fr);
             grid-gap: 45px 25px;
             justify-items: center;
-            padding: 40px 0px;
+            padding: 40px 0px 50px;
 
             .box {
                 border-radius: 4px;

@@ -155,22 +155,26 @@ header {
                 margin: 0px 0px 0px 12px;
             }
 
-            .online {
-                @include online(22px);
+            span {
+                display: inline-block;
                 border-width: 3px;
+                border-style: solid;
+                border-color: $windowColor;
+                border-radius: 25px;
+                background-color:  #547df9;
                 position: absolute;
                 top: -11px;
-                right: -11px;
+                left: 90%;
                 text-align: center;
-            }
-
-            span {
                 font-family: $defaultFont;
                 color: white;
                 font-size: 10px;
                 font-weight: 400;
-                text-align: center;
-                vertical-align: top;
+                height: 22px;
+                min-width: 22px;
+                max-width: 47px;
+                overflow: hidden;
+                padding: 0px 5px;
             }
         }
     }

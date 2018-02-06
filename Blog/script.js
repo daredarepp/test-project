@@ -8,15 +8,6 @@ $(document).ready(function() {
     var links1 = $('nav > a').not(logoutButton);
     var links2 = $('.col2 > a');
 
-    // Extend sidebar to bottom
-    extend();
-    function extend() {
-
-        var totalHeight = $('body').innerHeight();
-        sidebar.css({'height': `${totalHeight}px`});
-        col2.css({'height': `${totalHeight}px`});
-    }
-
     // Create article samples
     var articles = $('.articles');
     for (i = 1; i <= 6; i++) {
@@ -45,6 +36,15 @@ $(document).ready(function() {
         more.text('more');
         content.append(more);
         articles.append(box);
+    }
+
+    // Extend sidebar to bottom
+    extend();
+    function extend() {
+
+        var totalHeight = $('body').innerHeight();
+        sidebar.css({'height': `${totalHeight}px`});
+        col2.css({'height': `${totalHeight}px`});
     }
 
     // Toggle sidebar
